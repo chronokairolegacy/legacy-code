@@ -1,4 +1,4 @@
-# agent_harness
+# legacy-code
 
 Harness local para coding com modelos Ollama, mas sempre centrado na AMD Caicos XT desta maquina, que nao tem suporte moderno.
 
@@ -18,8 +18,24 @@ Ele também tenta forçar offload para GPU via `options.num_gpu` e falha se o mo
 
 1. Instale Python 3.11 ou mais novo.
 2. Inicie o Ollama localmente.
-3. No diretório `agent_harness`, rode `pip install -e .`.
+3. No diretório `legacy-code`, rode `pip install -e .`.
 4. Use `caicos-harness doctor` para validar o ambiente.
+
+## Runtime base (submodulo)
+
+O runtime `llm-on-legacy-gpus` fica em `runtime/llm-on-legacy-gpus` como submodulo Git.
+
+Para clonar tudo corretamente:
+
+```bash
+git submodule update --init --recursive
+```
+
+Para atualizar o runtime depois:
+
+```bash
+git submodule update --remote --merge
+```
 
 ## Finalidade
 
