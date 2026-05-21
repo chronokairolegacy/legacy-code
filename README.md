@@ -48,6 +48,21 @@ Este diretório documenta o agente customizado usado como base de um fluxo de co
 - manutencao do contexto da GPU Caicos XT como alvo principal;
 - atualizacao sincronizada da documentacao em `README.md` e `packages/`.
 
+## Ferramentas previstas (implementacao)
+
+- Ollama API: `/api/chat`, `/api/tags`, `ollama ps` (status GPU), `options.num_gpu/main_gpu`;
+- CLI local: `caicos-harness chat|models|doctor|read` e futuras `runtime|build|bench`;
+- Leitura de arquivos: trechos por linha, glob de pastas, lista de diretorios;
+- Busca no workspace: termo, regex e arvore;
+- Git: `status`, `diff`, `log`, `branch`, `submodule update --init --recursive`;
+- Build do runtime: `cmake`, `cmake --build`, scripts em PowerShell;
+- OpenCL diagnostics: listagem de plataformas e devices (via `--list-devices` do runtime);
+- Benchmarks: tokens/s, tempo por camada, memoria, tamanho de KV cache;
+- Tokenizacao/IO: encode/decode via tokenizer do runtime (ou GGUF reader);
+- Testes: smoke tests e comparacao de logits/outputs;
+- Config local: `legacy-code.toml` e variaveis de ambiente;
+- Logs: prompts/respostas em JSONL para auditoria.
+
 ## Agente ativo
 
 O agente customizado que o VS Code pode descobrir fica em [caicos-gpu.agent.md](caicos-gpu.agent.md).
